@@ -1,0 +1,81 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 30,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+        "cpu", 
+        "memory", 
+        "pulseaudio", 
+        "backlight", 
+        "network", 
+        "battery",
+        "clock",
+        "custom/power"
+    ],
+
+    "hyprland/window": {
+        "format": "󱄅  {title}",
+        "max-length": 35,
+        "rewrite": {
+            "": "Hyprland"
+        }
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "urgent": "󱓻"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "cpu": { "format": "󰍛 {usage}%" },
+    "memory": { "format": "󰘚 {percentage}%" },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+"network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "󰖪",
+        "on-click": "~/.config/waybar/wifi-menu.sh"
+    },"network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "󰖪",
+        "on-click": "~/.config/waybar/wifi-menu.sh"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "clock": {
+        "format": "󱑊 {:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d | %A}"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

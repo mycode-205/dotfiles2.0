@@ -1,0 +1,80 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    border: none;
+    padding: 0;
+}
+
+/* The Main Bar Container */
+window#waybar {
+    background: rgba(17, 17, 27, 0.85); /* Deep dark with transparency */
+    border-radius: 20px;
+    color: #cdd6f4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Inner modules general style */
+#window, #cpu, #memory, #pulseaudio, #backlight, #network, #battery, #clock, #custom-power {
+    padding: 0 12px;
+    margin: 4px 3px;
+    background: rgba(49, 50, 68, 0.4); /* Glass-like inner container */
+    border-radius: 15px;
+}
+
+/* --- Left: Window --- */
+#window {
+    background: transparent;
+    color: #b4befe;
+    margin-left: 10px;
+}
+
+/* --- Center: Workspaces --- */
+#workspaces {
+    background: rgba(49, 50, 68, 0.4);
+    margin: 4px 0;
+    border-radius: 15px;
+    padding: 0 5px;
+}
+
+#workspaces button {
+    color: #6c7086;
+    padding: 0 10px;
+}
+
+#workspaces button.active {
+    color: #a6e3a1; /* Vibrant green for active */
+    background: rgba(166, 227, 161, 0.1);
+    border-radius: 12px;
+}
+
+#workspaces button:hover {
+    color: #f5c2e7;
+}
+
+/* --- Right Side: Colorful Depth --- */
+#cpu { color: #f38ba8; }
+#memory { color: #fab387; }
+#pulseaudio { color: #89b4fa; }
+#backlight { color: #f9e2af; }
+#network { color: #94e2d5; }
+#battery { color: #a6e3a1; }
+#clock { color: #cba6f7; }
+
+/* Power Button Special Style */
+#custom-power {
+    background: #f38ba8;
+    color: #11111b;
+    border-radius: 15px;
+    margin-right: 10px;
+    padding: 0 15px;
+}
+
+#custom-power:hover {
+    background: #eba0ac;
+}
+
+/* Transition for all buttons */
+button {
+    transition: all 0.3s ease;
+}
