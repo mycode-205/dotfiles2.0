@@ -1,0 +1,18 @@
+Dotfiles2.0 Setup Instructions
+===============================
+
+First Way:
+----------
+
+Step 1: Clone the repository:
+git clone https://github.com/mycode-205/dotfiles2.0.git
+
+Step 2: Copy the repository files to your default ~/.config folder:
+cp -r ~/dotfiles2.0/* ~/.config/
+
+Alternative Way:
+----------------
+Run the following command in one line (replace YOUR_USERNAME with your GitHub username):
+git clone https://github.com/YOUR_USERNAME/dotfiles2.0.git ~/dotfiles2.0 && cp -r ~/dotfiles2.0/* ~/.config/
+
+After this, your configuration files should be set up in ~/.config and ready to use!
