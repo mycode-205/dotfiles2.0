@@ -1,0 +1,83 @@
+configuration {
+    show-icons: true;
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    text-color: #cdd6f4;
+    background-color: transparent;
+}
+
+window {
+    width: 1000px;
+    border-radius: 20px;
+    background-color: #1e1e2ef0;
+    border: 2px;
+    border-color: #89b4fa55;
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+listview {
+    columns: 4;
+    lines: 2;
+    spacing: 25px;
+    padding: 20px;
+    background-color: transparent;
+}
+
+inputbar {
+    padding: 12px;
+    border-radius: 15px;
+    background-color: #313244;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: #89b4fa;
+    background-color: transparent;
+}
+
+entry {
+    background-color: transparent;
+    text-color: #cdd6f4;
+    placeholder: "Search wallpapers...";
+}
+
+element {
+    orientation: vertical;
+    border-radius: 20px;
+    padding: 12px;
+    background-color: transparent;
+}
+
+element-icon {
+    size: 170px;
+    border-radius: 20px;
+    border: 3px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+element-text {
+    margin: 8px 0px 0px 0px;
+    horizontal-align: 0.5;
+    background-color: transparent;
+    text-color: #cdd6f4;
+}
+
+element selected {
+    background-color: #89b4fa22;
+    border-radius: 20px;
+}
+
+element selected element-icon {
+    border: 3px;
+    border-color: #89b4fa;
+}
+
+element selected element-text {
+    text-color: #89b4fa;
+}

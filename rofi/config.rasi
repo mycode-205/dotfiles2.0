@@ -1,0 +1,98 @@
+/**
+ * ROFI Glowing Border - 100% Dark Fix
+ */
+
+configuration {
+    modi:                       "drun,run,window";
+    show-icons:                 true;
+    display-drun:               "";
+    drun-display-format:        "{name}";
+    font:                       "JetBrainsMono Nerd Font 11";
+}
+
+* {
+    /* --- COLORS --- */
+    bg:                         #0f0f12;  /* Deep Black */
+    bg-alt:                     #1e1e24;  /* Search Bar */
+    fg:                         #ffffff;  /* Pure White Text */
+    glow:                       #00f2ff;  /* Your Glow Color */
+    
+    background-color:           transparent;
+    text-color:                 @fg;
+}
+
+window {
+    width:                      40%;
+    border:                     3px;       
+    border-color:               @glow;     
+    border-radius:              15px;      
+    padding:                    10px;      
+    background-color:           @bg;       /* Explicit window background */
+}
+
+mainbox {
+    spacing:                    15px;
+    margin:                     10px;
+    children:                   [ "inputbar", "listview" ];
+}
+
+/* --- SEARCH BAR --- */
+inputbar {
+    spacing:                    10px;
+    padding:                    12px;
+    border-radius:              10px;
+    background-color:           @bg-alt;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color:                 @glow;
+}
+
+entry {
+    text-color: #00f2ff; /* This makes just the typing text cyan */
+    placeholder: "Search...";
+    placeholder-color: #666666;
+}
+/* --- LIST VIEW --- */
+listview {
+    columns:                    1;
+    lines:                      8;
+    fixed-height:               true;
+    spacing:                    5px;
+}
+
+/* --- THE "WHITE BACKGROUND" KILLER SECTION --- */
+/* This forces every row state to use the dark background */
+
+element {
+    padding:                    10px;
+    border-radius:              8px;
+}
+
+element normal.normal,
+element normal.urgent,
+element normal.active,
+element alternate.normal,
+element alternate.urgent,
+element alternate.active {
+    background-color:           @bg;
+    text-color:                 @fg;
+}
+
+element selected.normal,
+element selected.urgent,
+element selected.active {
+    background-color:           @glow;
+    text-color:                 @bg;
+}
+
+element-icon {
+    size:                       24px;
+    cursor:                     inherit;
+}
+
+element-text {
+    vertical-align:             0.5;
+    text-color:                 inherit;
+}

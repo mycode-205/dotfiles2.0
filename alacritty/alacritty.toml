@@ -1,0 +1,23 @@
+[window]
+padding = { x = 15, y = 15 }
+dynamic_padding = true
+opacity = 0.85
+blur = true
+decorations = "None"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size = 11.0
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+blink_interval = 500
+
+[colors.primary]
+background = "#1e1e2e" # Catppuccin Mocha Dark
+foreground = "#cdd6f4"
+
+[colors.cursor]
+text = "#1e1e2e"
+cursor = "#f5e0dc"
